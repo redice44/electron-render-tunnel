@@ -1,0 +1,20 @@
+{
+  "name": "electron-renderer-tunnel",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/tunnel.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Matt Thomson",
+    "email": "red.cataclysm@gmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^1.7.8",
+    "typescript": "^2.5.3"
+  }
+}
