@@ -36,6 +36,9 @@ exports.createTunnel = function (ipcMain, windows) {
         });
     });
 };
+exports.rendererInit = function (ipcRenderer, cb) {
+    ipcRenderer.on("" + prefix + delim + "NEW", cb);
+};
 exports.makeTunnelChannel = function (firstRenderer, secondRenderer) {
     return "" + prefix + delim + orderNumbers(firstRenderer, secondRenderer);
 };

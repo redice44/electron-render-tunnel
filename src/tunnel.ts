@@ -50,6 +50,10 @@ export const createTunnel = (ipcMain: Electron.IpcMain, windows: [Electron.Brows
   });
 };
 
+export const rendererInit = (ipcRenderer: Electron.IpcRenderer, cb: Function): void => {
+  ipcRenderer.on(`${prefix}${delim}NEW`, cb);
+};
+
 export const makeTunnelChannel = (firstRenderer: number, secondRenderer: number): string => {
   return `${prefix}${delim}${orderNumbers(firstRenderer, secondRenderer)}`;
 }
